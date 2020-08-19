@@ -6,6 +6,8 @@ import {apiGetFoodPrint, ping} from '../Api'
 import Header from '../Components/Header'
 import Intro from '../Components/HeroText'
 import MidText from '../Components/MidText'
+import AOS from "aos";
+import 'aos/dist/aos.css';
 
 function TryButton() {
     return (
@@ -24,14 +26,11 @@ function TryButton() {
 function HomePage() {
     axios.defaults.baseURL = apiURL;
 
-    const pingBackend = () => {
-        ping((response) => {
-            console.log("hi")
-            console.log(response)
-        }).catch((error) => {
-            console.log(error)
-        });
-    }
+    useEffect( () =>{
+        AOS.init();
+        AOS.refresh();
+    }, []);
+
 
     const getIngredients = () => {
         apiGetFoodPrint("1 kg bef").then((response) => {
@@ -42,17 +41,13 @@ function HomePage() {
     }
 
     useEffect(() => {
-        pingBackend();
-    }, [])
-
-    function handleClick() {
         getIngredients();
-    }
+    }, [])
 
     return (<div>
             <Header fixed="top"/>
             <Intro/>
-            <Row className="justify-content-md-center" style={{
+            <Row className="justify-content-md-center text-center" style={{
                 paddingBottom: '20px'
             }}>
                 <Col md='auto'>
