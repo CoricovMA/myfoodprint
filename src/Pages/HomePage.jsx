@@ -9,6 +9,8 @@ import MidText from '../Components/MidText'
 import AOS from "aos";
 import 'aos/dist/aos.css';
 import ChefImages from "../Components/ChefImages";
+import Trees from "../Components/Trees";
+import Final from "../Components/Final";
 
 function TryButton() {
     return (
@@ -48,15 +50,11 @@ function HomePage() {
     return (<div>
             <Header fixed="top"/>
             <Intro/>
-            <Row className="justify-content-md-center text-center" style={{
-                paddingBottom: '20px'
-            }}>
-                <Col md='auto'>
-                    <TryButton/>
-                </Col>
-            </Row>
             <Row>
                 <MidText/>
+            </Row>
+            <Row>
+                <Final/>
             </Row>
         </div>
     )

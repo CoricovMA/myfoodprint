@@ -18,11 +18,12 @@ function InfoCard(props) {
      */
 
     return (
-        <Col data-aos={props.info.anim} data-aos-duration='1000'>
+        <Col data-aos={props.info.anim} data-aos-duration='1000' xs={{span: 4}} md={{span: 3}} style={{padding: 0}}>
             <Card style={{
                 border: '0px',
             }}>
-                <Card.Img src={props.info.pic} fluid/>
+                <Card.Img src={props.info.pic}
+                />
             </Card>
         </Col>
 
@@ -35,7 +36,7 @@ export default function ChefImages() {
             title: "Measuring Simplified",
             blurb: "Automatically find your answer by typing, uploading, or copy and pasting your recipe",
             pic: valueprop1,
-            anim: 'fade-right',
+            anim: 'fade-left',
         },
         {
             title: "Curated Data",
@@ -47,7 +48,7 @@ export default function ChefImages() {
             title: "Digestible Information",
             blurb: "CO2 is difficult to understand. We provide intelligible output that is meaningful to you and helps you eat sustainably",
             pic: valueprop3,
-            anim: 'fade-left'
+            anim: 'fade-right'
         }
     ]
 
