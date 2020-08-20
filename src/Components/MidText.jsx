@@ -8,7 +8,7 @@ export default function MidText(){
         marginBottom: 0,
         backgroundColor: '#f5f5f5',
         textAlign: 'center',
-        paddingTop: '30%'
+        paddingTop: '20%'
     }
 
     const textStyle = {
@@ -24,8 +24,6 @@ export default function MidText(){
         fontSize: '1.2em',
         fontWeight: '450',
         lineHeight: '27.2px',
-        paddingLeft: '20%',
-        paddingRight: '20%',
         paddingTop: '20px'
     }
 
@@ -34,12 +32,14 @@ export default function MidText(){
             marginBottom: 0
         }}>
             <Jumbotron style={midStyle} className='mr-auto'>
-                <h2 style={textStyle} data-aos='fade-left'>
+                <h2 style={textStyle} data-aos='fade-down'>
                     <u>30%</u> of greenhouse gases are caused by our diets
                 </h2>
                 <div data-aos="fade-right" >
                     <h5 style={subTitleStyle}>
                         Lack of transparency and information makes it difficult for you to change your impact.
+                        </h5>
+                        <h5>
                         We give you the tool to help you play your part in the sustainable future.
                     </h5>
                 </div>

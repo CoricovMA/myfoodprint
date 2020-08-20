@@ -47,11 +47,10 @@ export default function Intro() {
                 <Jumbotron style={jumboStyle} className='mr-auto'>
                     <h1 style={style}>
                         <div data-aos='fade-down' data-aos-easing='linear'>Create
-                            <span style={spanStyle}> sustainable </span>
-                            meals, the
+                            <span style={spanStyle}> sustainable </span> meals,
                         </div>
                         <div data-aos='fade-up' data-aos-easing='linear'>
-                            <span style={spanStyle}> smart </span>
+                        the <span style={spanStyle}> smart </span>
                             way</div>
                     </h1>
                     <HeroSub/>
