@@ -43,7 +43,6 @@ export default function MidText(){
                         We give you the tool to help you play your part in the sustainable future.
                     </h5>
                 </div>
-
             </Jumbotron>
         </Container>
     )

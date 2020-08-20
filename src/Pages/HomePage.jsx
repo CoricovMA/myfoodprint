@@ -57,6 +57,7 @@ function HomePage() {
             <Row>
                 <MidText/>
             </Row>
+            
         </div>
     )
 }
