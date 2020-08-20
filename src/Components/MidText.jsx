@@ -1,12 +1,15 @@
-import {Container, Jumbotron} from "react-bootstrap";
+import {Container, Jumbotron, Row, Col, Image} from "react-bootstrap";
 import React from "react";
-
+import valueprop1 from '../Assets/valueprop1.svg'
+import valueprop2 from '../Assets/valueprop2.svg'
+import valueprop3 from '../Assets/valueprop3.svg'
+import ChefImages from "./ChefImages";
 
 export default function MidText(){
     const midStyle = {
         height: '100vh',
         marginBottom: 0,
-        backgroundColor: '#f5f5f5',
+        backgroundColor: '#fbfbfb',
         textAlign: 'center',
         paddingTop: '20%'
     }
@@ -43,6 +46,7 @@ export default function MidText(){
                         We give you the tool to help you play your part in the sustainable future.
                     </h5>
                 </div>
+                <ChefImages/>
             </Jumbotron>
         </Container>
     )
