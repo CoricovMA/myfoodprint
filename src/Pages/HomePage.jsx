@@ -8,6 +8,7 @@ import Intro from '../Components/HeroText'
 import MidText from '../Components/MidText'
 import AOS from "aos";
 import 'aos/dist/aos.css';
+import LowerText from "../Components/LowerText";
 
 function TryButton() {
     return (
@@ -57,7 +58,7 @@ function HomePage() {
             <Row>
                 <MidText/>
             </Row>
-            
+            <LowerText/>
         </div>
     )
 }

@@ -5,7 +5,7 @@ import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse'
 
 export default function Header(){
     return (
-  <Navbar bg="light" variant="light" expand="lg" >
+  <Navbar bg="light" variant="light" expand="lg" fixed='top' className="shadow-sm">
     <Navbar.Brand href="/">
       <img
         alt=""

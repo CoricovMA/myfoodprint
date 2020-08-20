@@ -31,7 +31,6 @@ export default function Intro() {
         'color': '#85C020'
     }
 
-
     const jumboStyle = {
         'textAlign': 'center',
         'backgroundColor': 'white'
@@ -39,7 +38,7 @@ export default function Intro() {
 
     return (
         <Row style={{
-            height: '85vh',
+            height: '92vh',
             width: '100%'
         }}>
             <Col>
