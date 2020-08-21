@@ -11,18 +11,14 @@ export default function FinalText(){
         <Container fluid style={{
             height: '60vh',
             width: '100%',
-            alignItems: 'end',
             paddingTop: '50%'
         }}>
             <Jumbotron className="align-bottom justify-content-md-center text-center" style={{
                 paddingBottom: 0,
                 marginBottom: 0,
                 backgroundColor: 'white',
-                position: 'static'
             }}>
-                <Row>
 
-                </Row>
                 <Trees/>
             </Jumbotron>
         </Container>
