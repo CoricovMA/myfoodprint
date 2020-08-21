@@ -5,18 +5,6 @@ import valueprop3 from '../Assets/valueprop3.svg'
 import {Card, Col, Row} from 'react-bootstrap'
 
 function InfoCard(props) {
-    const titleStyle = {
-        fontSize: 1.65,
-        fontWeight: 400,
-        color: '#4B4B4C'
-    }
-
-    /**
-     * TODO
-     * will move pictures to another component (mid?), add some "info" cards at the end
-     *
-     */
-
     return (
         <Col data-aos={props.info.anim} data-aos-duration='1000' xs={{span: 4}} md={{span: 3}} style={{padding: 0}}>
             <Card style={{

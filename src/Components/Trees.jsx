@@ -11,7 +11,10 @@ function TreeComponent(props) {
 
     return (
         <Col>
-            <Image data-aos='zoom-in-up' data-aos-duration={props.index}
+            <Image data-aos='zoom-in-up'
+                   data-aos-duration={props.index}
+                   md={{span: 3}}
+                   xs={{span: 6}}
                    src={props.image}
             />
         </Col>
@@ -23,7 +26,7 @@ export default function Trees() {
     const treeSVG = [spring, summer, autumn, winter];
 
     return (
-        <Row>
+        <Row  className="align-bottom justify-content-md-center text-center">
             {treeSVG.map((tree, index) => <TreeComponent image={tree} index={index* 500}/>
             )}
         </Row>

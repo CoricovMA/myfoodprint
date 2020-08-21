@@ -12,24 +12,10 @@ import ChefImages from "../Components/ChefImages";
 import Trees from "../Components/Trees";
 import Final from "../Components/Final";
 
-function TryButton() {
-    return (
-        <Button style={{
-            color: 'white',
-            height: '70px',
-            width: '200px',
-            fontSize: '18px',
-            fontWeight: '800',
-            padding: '20px',
-            paddingBottom: '20px',
-        }} variant='warning'>Try for Free!</Button>
-    )
-}
-
 function HomePage() {
     axios.defaults.baseURL = apiURL;
 
-    useEffect( () =>{
+    useEffect(() => {
         AOS.init();
         AOS.refresh();
     }, []);

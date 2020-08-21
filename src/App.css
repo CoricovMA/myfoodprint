@@ -36,11 +36,7 @@
     transform: rotate(360deg);
   }
 }
-html, body. div{
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100%;
-}
+
 
 .row {
   width: 100%;
@@ -59,4 +55,36 @@ html, body. div{
 
 div{
   width: 100%;
+}
+
+body{
+  font-family: Fira Sans, sans-serif;
+}
+
+.try-button{
+  width: 120px;
+  height: 40px;
+  background-color: #85C020;
+  border: 0;
+}
+
+.try-button:hover{
+  color: #85C020;
+  background-color: #ffffff;
+  border: 2px solid #85C020
+}
+
+#input{
+  width: 400px;
+  height: 140px;
+  border: 0;
+  resize: none;
+}
+
+#input::selection{
+  border: 0;
+}
+
+#input-title{
+  margin-top: 40%;
 }
