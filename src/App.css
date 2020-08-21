@@ -74,6 +74,12 @@ body{
   border: 2px solid #85C020
 }
 
+.try-button:focus{
+  color: white;
+  background-color: #85C020;
+  border: 2px solid #91d420;
+}
+
 #input{
   width: 400px;
   height: 140px;
@@ -81,10 +87,12 @@ body{
   resize: none;
 }
 
-#input::selection{
+#input:focus{
   border: 0;
 }
 
 #input-title{
   margin-top: 40%;
+  color: #4B4B4C;
 }
+

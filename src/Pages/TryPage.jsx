@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../Components/Header'
 import {Col, Row, Button} from 'react-bootstrap'
 
-function TextAr() {
+function IngredientEntry(props){
 
+}
+
+function IngredientTable(props){
+    
+}
+
+function TextAr() {
+    const [table, setTable] = useState();
 
     return (
         <Row style={{
@@ -19,6 +27,8 @@ function TextAr() {
                          placeholder='Type or paste your recipe or ingredients here...
                                    Separate Ingredients with commas'
                />
+
+               <br/>
                <Button className='try-button'>Calculate</Button>
             </Col>
             <Col>
