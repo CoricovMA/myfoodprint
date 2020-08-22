@@ -41,11 +41,13 @@ function IngredientTable(props){
 function TextAr() {
     const [table, setTable] = useState();
     const [ingredients, setIngredients] = useState();
+    const [reqIngredients, setReqIngredients] = useState();
 
     const getIngredients = () => {
         apiGetFoodPrint("1 kg beef").then((res) => {
             setTable(<IngredientTable ingredients={res.data.ingredients}/>)
-            console.log(res)
+            console.log(res.data.ingredients)
+            console.log(reqIngredients)
         }).catch((err) => {
             console.log(err)
         })
@@ -68,6 +70,7 @@ function TextAr() {
                <textarea id='input'
                          placeholder='Type or paste your recipe or ingredients here...
                                    Separate Ingredients with commas'
+                                   onChange={e => setReqIngredients(e.target.value)}
                />
 
                <br/>
