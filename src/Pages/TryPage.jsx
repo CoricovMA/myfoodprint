@@ -1,38 +1,36 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import Header from '../Components/Header'
 import {Col, Row, Button, Table} from 'react-bootstrap'
 import {apiGetFoodPrint} from '../Api'
 
-function IngredientEntry(props){
+function IngredientEntry(props) {
 
-    console.log(props.ky)
-
-    return  (
+    return (
         <tr >
-            <td>{props.ingredient.name}</td>
-            <td>{props.ingredient.quantity} {props.ingredient.volume}</td>
-            <td>{props.ingredient.emissions}</td>
+            <td className='entry-col'>{props.ingredient.name}</td>
+            <td className='entry-col'>{props.ingredient.quantity} {props.ingredient.volume}</td>
+            <td className='entry-col'>{props.ingredient.emissions}</td>
             <td>{props.ingredient.calories}</td>
         </tr>
     )
 }
 
-function IngredientTable(props){
+function IngredientTable(props) {
 
     return (
-        <Table>
+        <Table id='result-table' className='shadow-sm'>
             <thead>
-                <tr>
-                    <th>INGREDIENT</th>
-                    <th>QUANTITY</th>
-                    <th>EMISSIONS</th>
-                    <th>CALORIES</th>
-                </tr>
+            <tr>
+                <th>INGREDIENT</th>
+                <th>QUANTITY</th>
+                <th>EMISSIONS</th>
+                <th>CALORIES</th>
+            </tr>
             </thead>
             <tbody>
-                {props.ingredients.map( (ingredient, index) =>
-                     <IngredientEntry ingredient={ingredient} key={index}/>
-                 )}
+            {props.ingredients.map((ingredient, index) =>
+                <IngredientEntry ingredient={ingredient} key={index}/>
+            )}
             </tbody>
         </Table>
     )
@@ -40,20 +38,24 @@ function IngredientTable(props){
 
 function TextAr() {
     const [table, setTable] = useState();
-    const [ingredients, setIngredients] = useState();
-    const [reqIngredients, setReqIngredients] = useState();
+    const [reqIngredients, setReqIngredients] = useState("");
 
     const getIngredients = () => {
-        apiGetFoodPrint("1 kg beef").then((res) => {
-            setTable(<IngredientTable ingredients={res.data.ingredients}/>)
-            console.log(res.data.ingredients)
-            console.log(reqIngredients)
-        }).catch((err) => {
-            console.log(err)
-        })
+        if (reqIngredients.length > 0) {
+
+            apiGetFoodPrint(reqIngredients).then((res) => {
+                setTable(<IngredientTable ingredients={res.data.ingredients}/>)
+                console.log(res.data.ingredients)
+                console.log(reqIngredients)
+
+            }).catch((err) => {
+                console.log(err)
+            })
+        }
+
     }
 
-    function handleClick(){
+    function handleClick() {
         getIngredients();
     }
 
@@ -66,20 +68,20 @@ function TextAr() {
                 md={{span: 4, offset: 1}}
                 lg={4}
             >
-               <h2 id='input-title'>Enter a Recipe!</h2>
-               <textarea id='input'
-                         placeholder='Type or paste your recipe or ingredients here...
+                <h2 id='input-title'>Enter a Recipe!</h2>
+                <textarea id='input'
+                          placeholder='Type or paste your recipe or ingredients here...
                                    Separate Ingredients with commas'
-                                   onChange={e => setReqIngredients(e.target.value)}
-               />
+                          onChange={e => setReqIngredients(e.target.value)}
+                />
 
-               <br/>
-               <Button onClick={handleClick} className='try-button'>Calculate</Button>
+                <br/>
+                <Button onClick={handleClick} className='try-button'>Calculate</Button>
             </Col>
-            <Col id="ingr-table"
-                xs={{ span: 12 }}
-                md={{ span: 7}}
-                lg={{ span: 4, offset: 5}}
+            <Col id="ingr-col"
+                 xs={{span: 12}}
+                 md={{span: 7}}
+                 lg={{span: 4, offset: 5}}
             >
                 {table}
             </Col>

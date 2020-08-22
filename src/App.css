@@ -96,7 +96,15 @@ body{
   color: #4B4B4C;
 }
 
-#ingr-table{
+#ingr-col{
   margin-top:12%;
   margin-left: 0;
+}
+
+#result-table{
+  border:solid  1px gainsboro;
+}
+
+.entry-col{
+  border-right:solid 1px gainsboro;
 }
