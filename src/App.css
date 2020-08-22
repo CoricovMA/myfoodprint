@@ -81,7 +81,7 @@ body{
 }
 
 #input{
-  width: 400px;
+  width: 200px;
   height: 140px;
   border: 0;
   resize: none;
@@ -96,3 +96,7 @@ body{
   color: #4B4B4C;
 }
 
+#ingr-table{
+  margin-top:12%;
+  margin-left: 0;
+}
