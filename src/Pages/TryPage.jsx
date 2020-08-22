@@ -7,7 +7,7 @@ function IngredientEntry(props){
 }
 
 function IngredientTable(props){
-    
+
 }
 
 function TextAr() {
