@@ -40,7 +40,7 @@ function TextAr() {
     const [table, setTable] = useState();
 
     const getIngredients = () => {
-        apiGetFoodPrint().then((res) => {
+        apiGetFoodPrint("1 kg beef").then((res) => {
             console.log(res)
         }).catch((err) => {
             console.log(err)
@@ -67,7 +67,7 @@ function TextAr() {
                />
 
                <br/>
-               <Button className='try-button'>Calculate</Button>
+               <Button onClick={handleClick} className='try-button'>Calculate</Button>
             </Col>
             <Col>
                 {}

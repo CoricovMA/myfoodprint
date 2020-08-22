@@ -8,6 +8,8 @@ import {ConnectedRouter, connectRouter, routerMiddleware} from 'connected-react-
 import {createBrowserHistory} from 'history';
 import Router from './Router/Router'
 import AOS from 'aos';
+import axios from 'axios';
+import {apiURL} from './config/env'
 
 export const history = createBrowserHistory({basename: '/'});
 
@@ -19,6 +21,8 @@ const store = createStore(reducer(history), applyMiddleware(ReduxThunk, routerMi
 
 
 function App() {
+
+    axios.defaults.baseURL = apiURL;
 
     return (
         <Provider store={store}>
