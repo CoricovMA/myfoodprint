@@ -1,17 +1,55 @@
 import React, { useState } from 'react';
 import Header from '../Components/Header'
-import {Col, Row, Button} from 'react-bootstrap'
+import {Col, Row, Button, Table} from 'react-bootstrap'
+import {apiGetFoodPrint} from '../Api'
 
 function IngredientEntry(props){
 
+    return  (
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    )
 }
 
 function IngredientTable(props){
     
+    return (
+        <Table>
+            <thead>
+                <tr>
+                    <th>INGREDIENT</th>
+                    <th>QUANTITY</th>
+                    <th>EMISSIONS</th>
+                    <th>CALORIES</th>
+                </tr>    
+            </thead>
+            <tbody>
+                {props.ingredients.map( (ingredient) => 
+                     <IngredientEntry ingredient={ingredient}/>
+                 )}
+            </tbody>
+        </Table>
+    )
 }
 
 function TextAr() {
     const [table, setTable] = useState();
+
+    const getIngredients = () => {
+        apiGetFoodPrint().then((res) => {
+            console.log(res)
+        }).catch((err) => {
+            console.log(err)
+        })
+    }
+
+    function handleClick(){
+        getIngredients();
+    }
 
     return (
         <Row style={{
