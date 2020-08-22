@@ -7,7 +7,6 @@ import {Image, Row, Col} from 'react-bootstrap'
 
 function TreeComponent(props) {
 
-    console.log(props.index)
 
     return (
         <Col>
@@ -27,7 +26,7 @@ export default function Trees() {
 
     return (
         <Row  className="align-bottom justify-content-md-center text-center">
-            {treeSVG.map((tree, index) => <TreeComponent image={tree} index={index* 500}/>
+            {treeSVG.map((tree, index) => <TreeComponent image={tree} index={index* 500} key={index+1}/>
             )}
         </Row>
     )

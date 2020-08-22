@@ -48,7 +48,7 @@ export default function ChefImages() {
             height: '10%',
             backgroundColor: '#fbfbfb'
         }}>
-            {componentInfo.map(comp => <InfoCard info={comp}/>)}
+            {componentInfo.map(comp => <InfoCard info={comp} key={comp.title}/>)}
         </Row>
 
     )

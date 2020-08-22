@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './App.css';
 import {Provider} from 'react-redux'
 import {applyMiddleware, combineReducers, createStore} from 'redux';
@@ -7,7 +7,6 @@ import {BrowserRouter} from 'react-router-dom';
 import {ConnectedRouter, connectRouter, routerMiddleware} from 'connected-react-router';
 import {createBrowserHistory} from 'history';
 import Router from './Router/Router'
-import AOS from 'aos';
 import axios from 'axios';
 import {apiURL} from './config/env'
 

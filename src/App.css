@@ -66,6 +66,7 @@ body{
   height: 40px;
   background-color: #85C020;
   border: 0;
+  font-weight: 400;
 }
 
 .try-button:hover{

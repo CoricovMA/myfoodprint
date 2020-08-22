@@ -1,8 +1,5 @@
-import {Container, Jumbotron, Row, Col, Image} from "react-bootstrap";
+import {Container, Jumbotron} from "react-bootstrap";
 import React from "react";
-import valueprop1 from '../Assets/valueprop1.svg'
-import valueprop2 from '../Assets/valueprop2.svg'
-import valueprop3 from '../Assets/valueprop3.svg'
 import ChefImages from "./ChefImages";
 
 export default function MidText(){

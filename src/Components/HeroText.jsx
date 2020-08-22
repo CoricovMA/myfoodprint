@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Jumbotron from "react-bootstrap/Jumbotron";
 import {Col, Container, Row} from "react-bootstrap";
 

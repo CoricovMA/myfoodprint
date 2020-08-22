@@ -45,8 +45,6 @@ function TextAr() {
 
             apiGetFoodPrint(reqIngredients).then((res) => {
                 setTable(<IngredientTable ingredients={res.data.ingredients}/>)
-                console.log(res.data.ingredients)
-                console.log(reqIngredients)
 
             }).catch((err) => {
                 console.log(err)
