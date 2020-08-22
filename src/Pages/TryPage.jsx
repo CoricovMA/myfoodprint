@@ -5,12 +5,14 @@ import {apiGetFoodPrint} from '../Api'
 
 function IngredientEntry(props){
 
+    console.log(props.ky)
+
     return  (
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+        <tr >
+            <td>{props.ingredient.name}</td>
+            <td>{props.ingredient.quantity} {props.ingredient.volume}</td>
+            <td>{props.ingredient.emissions}</td>
+            <td>{props.ingredient.calories}</td>
         </tr>
     )
 }
@@ -28,8 +30,8 @@ function IngredientTable(props){
                 </tr>    
             </thead>
             <tbody>
-                {props.ingredients.map( (ingredient) => 
-                     <IngredientEntry ingredient={ingredient}/>
+                {props.ingredients.map( (ingredient, index) => 
+                     <IngredientEntry ingredient={ingredient} key={index}/>
                  )}
             </tbody>
         </Table>
@@ -38,9 +40,11 @@ function IngredientTable(props){
 
 function TextAr() {
     const [table, setTable] = useState();
+    const [ingredients, setIngredients] = useState();
 
     const getIngredients = () => {
         apiGetFoodPrint("1 kg beef").then((res) => {
+            setTable(<IngredientTable ingredients={res.data.ingredients}/>)
             console.log(res)
         }).catch((err) => {
             console.log(err)
@@ -58,7 +62,7 @@ function TextAr() {
             <Col
                 xs={{span: 6}}
                 md={{span: 4, offset: 1}}
-                lg={6}
+                lg={4}
             >
                <h2 id='input-title'>Enter a Recipe!</h2>
                <textarea id='input'
@@ -69,8 +73,12 @@ function TextAr() {
                <br/>
                <Button onClick={handleClick} className='try-button'>Calculate</Button>
             </Col>
-            <Col>
-                {}
+            <Col id="ingr-table"
+                xs={{ span: 12 }}
+                md={{ span: 7}}
+                lg={{ span: 4, offset: 5}}
+            >
+                {table}
             </Col>
         </Row>
 
