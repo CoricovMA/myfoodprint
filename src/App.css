@@ -82,10 +82,13 @@ body{
 }
 
 #input{
-  width: 200px;
+  width: 70%;
   height: 140px;
-  border: 0;
+  border-style: none; 
+  border-color: Transparent; 
+  overflow: auto;    
   resize: none;
+  outline: none;
 }
 
 #input:focus{

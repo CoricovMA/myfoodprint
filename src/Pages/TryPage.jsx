@@ -67,10 +67,12 @@ function TextAr() {
                 lg={4}
             >
                 <h2 id='input-title'>Enter a Recipe!</h2>
-                <textarea id='input'
-                          placeholder='Type or paste your recipe or ingredients here...
+                <textarea 
+                        style={{ border: 'none'}}
+                        id='input'
+                        placeholder='Type or paste your recipe or ingredients here...
                                    Separate Ingredients with commas'
-                          onChange={e => setReqIngredients(e.target.value)}
+                        onChange={e => setReqIngredients(e.target.value)}
                 />
 
                 <br/>
