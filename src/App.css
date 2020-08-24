@@ -109,3 +109,8 @@ body{
 .entry-col{
   border-right:solid 1px gainsboro;
 }
+
+.hero-row{
+  height: 100vh;
+  width: 100%;
+}

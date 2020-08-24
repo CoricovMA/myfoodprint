@@ -8,7 +8,7 @@ export default function MidText(){
         marginBottom: 0,
         backgroundColor: '#fbfbfb',
         textAlign: 'center',
-        paddingTop: '20%'
+        paddingTop: '10%'
     }
 
     const textStyle = {

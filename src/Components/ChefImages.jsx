@@ -6,11 +6,16 @@ import {Card, Col, Row} from 'react-bootstrap'
 
 function InfoCard(props) {
     return (
-        <Col data-aos={props.info.anim} data-aos-duration='1000' xs={{span: 4}} md={{span: 3}} style={{padding: 0}}>
+        <Col data-aos={props.info.anim}
+             data-aos-duration='1000' 
+             xs={{span: 4}} 
+             md={{span: 3}} 
+             style={{padding: 0}}>
             <Card style={{
                 border: '0px',
             }}>
-                <Card.Img src={props.info.pic}
+                <Card.Img 
+                    src={props.info.pic}
                 />
             </Card>
         </Col>

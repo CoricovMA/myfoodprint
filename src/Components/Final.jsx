@@ -19,7 +19,7 @@ export default function FinalText() {
             }}>
                 <Row style={{
                     textAlign: 'center',
-                    marginBottom: '25%',
+                    marginBottom: '20%',
                     width: '100%',
                 }}>
                     <h2  style={{

@@ -37,10 +37,7 @@ export default function Intro() {
     }
 
     return (
-        <Row style={{
-            height: '92vh',
-            width: '100%'
-        }}>
+        <Row className="hero-row">
             <Col>
             <Container>
                 <Jumbotron style={jumboStyle} className='mr-auto'>

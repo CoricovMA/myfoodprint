@@ -33,10 +33,10 @@ function HomePage() {
     return (<div>
             <Header fixed="top"/>
             <Intro/>
-            <Row>
+            <Row className="hero-row">
                 <MidText/>
             </Row>
-            <Row>
+            <Row >
                 <Final/>
             </Row>
         </div>
